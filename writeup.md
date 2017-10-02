@@ -66,7 +66,7 @@ It should not have failed on the broken white lines on the right, but it did. Th
 
 The following two improvements were applied:
 * **lower mask’s horizon** - to remove the contamination of the left and right line sets, introduced by the curvature at the end of the road markings (those closest to the horizon). Unfortunately the curvature introduced a change in the slope, the slope was being used to distinguish left and right lane markings. This contamination led to the averaging of the slope containing lane markings from other lanes (*e.g. the tip of the right lanes being placed in the set of left lanes*)
-* **introduce colour filters** - using the openCV Hue Saturation and Light (HSL) filter to the image in a new function called *filter_HSL* allowed the yellow lane lines to be more easily distinguished. Recombining the new image the white lane lines produced clearer lane lines on both sides of the image.
+* **introduce colour filters** - using the openCV Hue Saturation and Light (HSL) filter to the image in a new function called *filter_HSL* allowed the yellow lane lines to be more easily distinguished. Recombining the new image the white lane lines produced clearer lane lines on both sides of the image. ([reference to HSL](http://colorizer.org/))
 
 ![HSL](https://raw.githubusercontent.com/dcarlyle/CarND-LaneLines-P1/master/images/HSL_filter.png "HSL filter on yellow lane")
 
