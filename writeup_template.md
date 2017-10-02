@@ -23,7 +23,7 @@ Each of the above applied an additional step or refinement to improve the pipeli
 ### Initial pipeline
 The initial pipeline was built to identify lane lines as viewed from the a driver’s perspective through the main front car windscreen.
 
-![image of a normal road](https://raw.githubusercontent.com/dcarlyle/CarND-LaneLines-P1/master/images/test_road.jpg "image of a normal road")
+![image of a normal road](https://github.com/dcarlyle/CarND-LaneLines-P1/blob/master/test_images/solidWhiteCurve.jpg "image of a normal road")
 
 The steps in this pipline were:
 * *Gray scale* - improving contrast
@@ -36,7 +36,7 @@ The steps in this pipline were:
 *Note* Hough transforms a line in image space into a single point in parameter space (Hough space), Parallel lines are represented by two points at the same slope (m) value, but different b (intersections) values. Additional information can be found at [Understanding Hough Transform With Python](https://alyssaq.github.io/2014/understanding-hough-transform/)
 OpenCV provides  a slightly faster variant of Hough Transformation, which incorporates probability, HoughLinesP.
 
-![image of a normal road](https://raw.githubusercontent.com/dcarlyle/CarND-LaneLines-P1/master/images/driverless_cars/pipeline.png "pipeline")
+![pipeline](https://raw.githubusercontent.com/dcarlyle/CarND-LaneLines-P1/master/images/pipeline.png "pipeline")
 
 #### Limitations
 The Draw_Lines function is able to enhance the road markings by painting each line it detects in red on top of the image. Forming a clear indication of the location of the lines.
@@ -67,7 +67,7 @@ The following two improvements were applied:
 * **lower mask’s horizon** - to remove the contamination of the left and right line sets, introduced by the curvature at the end of the road markings (those closest to the horizon). Unfortunately the curvature introduced a change in the slope, the slope was being used to distinguish left and right lane markings. This contamination led to the averaging of the slope containing lane markings from other lanes (*e.g. the tip of the right lanes being placed in the set of left lanes*)
 * **introduce colour filters** - using the openCV Hue Saturation and Light (HSL) filter to the image in a new function called *filter_HSL* allowed the yellow lane lines to be more easily distinguished. Recombining the new image the white lane lines produced clearer lane lines on both sides of the image.
 
-![HSL](https://raw.githubusercontent.com/dcarlyle/dcarlyle.github.io/master/assets/images/driverless_cars/HSL_filter.png "HSL filter on yellow lane")
+![HSL](https://raw.githubusercontent.com/dcarlyle/CarND-LaneLines-P1/master/images/HSL_filter.png "HSL filter on yellow lane")
 
 ## Pipeline shortcomings 
 The pipline only has two parts in essence:
