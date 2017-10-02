@@ -25,7 +25,7 @@ The initial pipeline was built to identify lane lines as viewed from the a drive
 
 ![image of a normal road](https://github.com/dcarlyle/CarND-LaneLines-P1/blob/master/test_images/solidWhiteCurve.jpg "image of a normal road")
 
-The steps in this pipline were:
+The steps in this pipeline were:
 * *Gray scale* - improving contrast
 * *Gaussian smoothing* - to suppress noise and spurious gradients by averaging them out
 * *Canny edge detection* - for detecting strong edges
@@ -70,7 +70,7 @@ The following two improvements were applied:
 ![HSL](https://raw.githubusercontent.com/dcarlyle/CarND-LaneLines-P1/master/images/HSL_filter.png "HSL filter on yellow lane")
 
 ## Pipeline shortcomings 
-The pipline only has two parts in essence:
+The pipeline only has two parts in essence:
 
 1. Enhance the lane lines
 2. Detect the direction of the lanes lines
