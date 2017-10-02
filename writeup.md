@@ -89,6 +89,9 @@ The algorithm currently computes quite slowly. If we want to know where to to dr
 ### Lane line visibility
 Additional filters could be used to highlight the edge of the road, these could be used for off road driving.
 
+### Caching
+When a human driver is busy with changing a radio station, they are relying on the last look at the road before they looked away. Similarly there are a few occasions when the pipeline was unable to generated a prediction of the lane lines onto the image. During that occurance the last known prediction could have been printed onto the image.
+
 ### Lane direction
 A very simple approach was applied in the final rewrite of process_image. This simply split the mask into *right* and *left*  masks. This instantly groups the right lanes and left lanes by image area, rather than the collection of calculated slopes. 
 
