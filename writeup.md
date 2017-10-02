@@ -1,4 +1,5 @@
 # **Finding Lane Lines on the Road** 
+[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 ---
 Humans use their eyes to decide where to go. The lines on the road that show where the lanes are and act as a constant reference for where to steer the vehicle.
@@ -89,7 +90,7 @@ The algorithm currently computes quite slowly. If we want to know where to to dr
 Additional filters could be used to highlight the edge of the road, these could be used for off road driving.
 
 ### Lane direction
-A very simple approach was applied in the final rewrite of process_image. This simply split the mask into *right* and *left* masks. This instantly groups the right lanes and left lanes by image area rather than the collection of calculated slopes. 
+A very simple approach was applied in the final rewrite of process_image. This simply split the mask into *right* and *left*  masks. This instantly groups the right lanes and left lanes by image area, rather than the collection of calculated slopes. 
 
 By having a collection of slopes that make up a left lane, we can then split these by their slope. This allows us to see if a bend in the road is occuring when we start to collect lines with a negative slope. We can even use this to quickly tell when the road is bending sharply or changing direction.
 
